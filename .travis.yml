@@ -9,6 +9,10 @@ addons:
 jdk:
   - oraclejdk8
 
+env:
+  - MONGO_USER=$MONGO_USER
+  - MONGO_PASS=$MONGO_PASS
+
 script:
   - mvn -f MongoBasic/pom.xml test -DMONGO_USER=$MONGO_USER -DMONGO_PASS=$MONGO_PASS
   # JaCoCo is used to have code coverage, the agent has to be activated.
