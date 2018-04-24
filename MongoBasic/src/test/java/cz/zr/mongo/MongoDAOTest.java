@@ -19,6 +19,7 @@ public class MongoDAOTest {
 	 * @return  */
 	private String prepareConnectionString() {
 		String user = System.getProperty("MONGO_USER");
+		System.out.println("user: " + user); // Quickly just for debug purpose. FIXME remove this asap!
 		String pass = System.getProperty("MONGO_PASS");
 		Assert.assertNotNull("User cannot be null. ", user);
 		Assert.assertNotNull("Pass cannot be null. ", pass);
